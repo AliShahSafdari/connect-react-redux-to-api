@@ -14,13 +14,13 @@ const UserList = () => {
 
     return(
         <div>
-      <h1>Users</h1>
-      {isLoading && <div>Loading...</div>}
+      <h1>UsersList</h1>
+      {isLoading && <div>...Loading...</div>}
       {error && <div>Error:{error}</div>}
       {!isLoading&&userItem.length ? (
         <ul>
           {userItem.map(user => (
-           <li key={user.name.first}>{user.name.last}, {user.name.last}</li>))}
+           <li key={user.name.first}>{user.name.last} : {user.name.last}</li>))}
         </ul>) : null}
         </div>
     );
